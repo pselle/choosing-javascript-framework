@@ -2,18 +2,21 @@ var App = App || {};
 
 App.Container = document.getElementById('content');
 
+var property1 = new App.Property();
+var property2 = new App.Property();
+App.defaultCollection = new App.PropertyCollection([property1, property2]);
+
 App.Router = Backbone.Router.extend({
     routes: {
         "": "defaultRoute",
+        "backbone": "defaultRoute",
         "property/:id": "showProperty"    
     },
     showProperty: function(id) {
-        var property = App.PropertyModel.fetch(id);
-        App.Container.innerHTML = new PropertyShowView({ model: property }).render().el;
+        App.Container.appendChild(new App.PropertyShowView({ model: property }).render().el);
     },
     defaultRoute: function() {
-        var collection = App.PropertyCollection.fetch();
-        App.Container.innerHTML = new PropertyListView({ collection: collection }).render().el;
+        App.Container.appendChild(new App.PropertyListView({ collection: App.defaultCollection }).render().el);
     }
 });
 
