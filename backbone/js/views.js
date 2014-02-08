@@ -25,9 +25,12 @@ App.PropertyListView = Backbone.View.extend({
     tagName: 'ul',
     render: function() {
         this.collection.each(function(item) {
-            var item = new App.PropertyListItem({ model: item.toJSON() }).render().el;
-            this.el.appendChild(item);
+            this.renderProperty(item);
         }, this);
         return this;
+    },
+    renderProperty: function(item) {
+        var item = new App.PropertyListItem({ model: item.toJSON() });
+        this.el.appendChild(item.render().el);        
     }
 });
