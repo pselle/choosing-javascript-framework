@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Realtors & Co.</title>
+    <script type="text/javascript" src="vendor/angular.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.js"></script>
+    <script type="text/javascript" src="js/directives.js"></script>
+
+</head>
+<body ng-app="realtorsApp">
+    <h1>Realtor's Co Properties</h1>
+    <div ng-view></div ng-view>
+
+    <table ng-controller="PropertyController">
+        <tr ng-repeat="property in properties">
+            <td><a href="#">{{ property.address }}</a></td>
+            <td>{{ property.zip }}</td>
+            <td>{{ property.listingPrice | currency }}</td>
+        </tr>
+    </table>
+</body>
+</html>
