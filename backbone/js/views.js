@@ -1,9 +1,11 @@
 var App = App || {};
 
-App.PropertyView = Backbone.View.extend({
+App.PropertyShowView = Backbone.View.extend({
     tagName: 'div',
     className: 'property',
-    template: _.template('Listing'),
+    template: _.template('<h1><%= streetAddress %></h1>'
+        + '<p>This lovely property lies in the <%= zipCode %> area,'
+        + 'with an asking price of <%= currentAsk %></p>'),
     render: function() {
         this.el.innerHTML = this.template(this.model.attributes);
         return this;
@@ -13,7 +15,7 @@ App.PropertyView = Backbone.View.extend({
 App.PropertyListItem = Backbone.View.extend({
     tagName: 'tr',
     className: 'property-item',
-    template: _.template('<td><%= streetAddress %></td>'
+    template: _.template('<td><a href="/#property/<%= id %>"><%= streetAddress %></a></td>'
         + '<td><%= zipCode %></td>'
         + '<td><%= currentAsk %></td>'),
     render: function() {

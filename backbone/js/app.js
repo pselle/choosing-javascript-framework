@@ -2,33 +2,42 @@ var App = App || {};
 
 App.Container = document.getElementById('content');
 
-var property1 = new App.Property({
+var data = [{
+        id: 1,
         streetAddress: '123 Drury Lane',
         zipCode: 12345,
         currentAsk: 230000,
         imagePath: ''
-    });
-var property2 = new App.Property({
+    },
+    {
+        id: 2,
         streetAddress: '983 Lilac Blvd',
         zipCode: 20923,
         currentAsk: 1000000,
         imagePath: ''
-    });
-App.defaultCollection = new App.PropertyCollection([property1, property2]);
+    },
+    {
+        id: 3,
+        streetAddress: '342 Spruce St',
+        zipCode: 20923,
+        currentAsk: 1000000,
+        imagePath: ''
+    }];
+App.defaultCollection = new App.PropertyCollection(data);
 
 App.Router = Backbone.Router.extend({
     routes: {
-        "": "defaultRoute",
-        "backbone": "defaultRoute",
-        "property/:id": "showProperty"    
+        "property/:id": "showProperty",  
+        "*other": "defaultRoute"
     },
     showProperty: function(id) {
-        App.Container.appendChild(new App.PropertyShowView({ model: property }).render().el);
+        $(App.Container).html(new App.PropertyShowView({ model: App.defaultCollection.get(id) }).render().el);
+        // App.Container.appendChild(new App.PropertyShowView({ model: App.defaultCollection.get(id) }).render().el);
     },
     defaultRoute: function() {
-        App.Container.appendChild(new App.PropertyListView({ collection: App.defaultCollection }).render().el);
+        $(App.Container).html(new App.PropertyListView({ collection: App.defaultCollection }).render().el);
     }
 });
 
 var appRouter = new App.Router();
-Backbone.history.start({pushState: true});
+Backbone.history.start();
