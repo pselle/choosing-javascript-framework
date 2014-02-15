@@ -5,7 +5,7 @@ App.PropertyShowView = Backbone.View.extend({
     className: 'property',
     template: _.template('<h1><%= streetAddress %></h1>'
         + '<p>This lovely property lies in the <%= zipCode %> area,'
-        + 'with an asking price of <%= currentAsk %></p>'),
+        + ' with an asking price of <%= currentAsk %></p>'),
     render: function() {
         this.el.innerHTML = this.template(this.model.attributes);
         return this;
