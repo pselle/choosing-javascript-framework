@@ -22,7 +22,8 @@ var data = [{
         zipCode: 20923,
         currentAsk: 1000000,
         imagePath: ''
-    }];
+}];
+
 App.defaultCollection = new App.PropertyCollection(data);
 
 App.Router = Backbone.Router.extend({
@@ -32,7 +33,6 @@ App.Router = Backbone.Router.extend({
     },
     showProperty: function(id) {
         $(App.Container).html(new App.PropertyShowView({ model: App.defaultCollection.get(id) }).render().el);
-        // App.Container.appendChild(new App.PropertyShowView({ model: App.defaultCollection.get(id) }).render().el);
     },
     defaultRoute: function() {
         $(App.Container).html(new App.PropertyListView({ collection: App.defaultCollection }).render().el);
