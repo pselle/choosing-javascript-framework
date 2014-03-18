@@ -6,14 +6,15 @@
 <body>
     <h1>Realtor's Co Properties</h1>
     <script type="text/x-handlebars" data-template-name="properties">
-        Here be the properties template
+        <table>
         {{#each}}
-            <li>
-                {{#link-to 'property' this }}
-                    {{address}}
-                {{/link-to}}
-            </li>
+            <tr ng-repeat="property in properties">
+                <td>{{#link-to 'property' this }}{{address}}{{/link-to}}</td>
+                <td>{{ zip }}</td>
+                <td>{{ price }}</td>
+            </tr>
         {{/each}}
+        </table>
     </script>
 
     <script type="text/x-handlebars" data-template-name="property">
