@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Realtors &amp; Co.</title>
+</head>
+<body>
+    <h1>Realtor's Co Properties</h1>
+    <script type="text/x-handlebars" data-template-name="properties">
+        Here be the properties template
+        {{#each}}
+            <li>
+                {{#link-to 'property' this }}
+                    {{address}}
+                {{/link-to}}
+            </li>
+        {{/each}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="property">
+        {{ address }}
+    </script>
+    <script src="vendor/jquery-1.11.0.min.js"></script>
+    <script src="vendor/handlebars-1.1.2.js"></script>
+    <script src="vendor/ember-1.4.0.js"></script>
+    <script src="vendor/ember-data.js"></script>
+    <!-- To see Ember without debug messages, use this build instead of the above -->
+    <!-- <script src="vendor/ember.min.js"></script> -->
+    <script src="js/app.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/models/property.js"></script>
+</body>
+</html>
