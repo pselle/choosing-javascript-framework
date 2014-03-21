@@ -8,7 +8,7 @@
     <script type="text/x-handlebars" data-template-name="properties">
         <table>
         {{#each}}
-            <tr ng-repeat="property in properties">
+            <tr>
                 <td>{{#link-to 'property' this }}{{address}}{{/link-to}}</td>
                 <td>{{ zip }}</td>
                 <td>{{ price }}</td>
@@ -18,8 +18,11 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="property">
-        {{ address }}
+        <h2>{{ address }}</h2>
+        <p>This great property in the {{ zip }} area is currently
+    listed at {{ price }}</p>
     </script>
+ 
     <script src="vendor/jquery-1.11.0.min.js"></script>
     <script src="vendor/handlebars-1.1.2.js"></script>
     <script src="vendor/ember-1.4.0.js"></script>

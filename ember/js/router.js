@@ -9,8 +9,8 @@ App.PropertiesRoute = Ember.Route.extend({
     }
 });
 
-App.PropertyRoute = Ember.Route.extend({
-    model: function(params) {
-        return this.store.find('property', params.property_id);
-    }
-});
+// App.PropertyRoute = Ember.Route.extend({
+//     model: function(params) {
+//         return this.store.find('property', params.property_id);
+//     }
+// });

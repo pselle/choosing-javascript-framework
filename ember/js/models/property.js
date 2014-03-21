@@ -8,7 +8,6 @@ App.Property = DS.Model.extend({
     price: DS.attr('number')
 });
 
-//todo
 App.Property.FIXTURES = [
     {
         id: 1,
