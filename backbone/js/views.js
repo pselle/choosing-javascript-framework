@@ -15,7 +15,7 @@ App.PropertyShowView = Backbone.View.extend({
 App.PropertyListItem = Backbone.View.extend({
     tagName: 'tr',
     className: 'property-item',
-    template: _.template('<td><a href="/#property/<%= id %>"><%= streetAddress %></a></td>'
+    template: _.template('<td><a href="#property/<%= id %>"><%= streetAddress %></a></td>'
         + '<td><%= zipCode %></td>'
         + '<td><%= currentAsk %></td>'),
     render: function() {

@@ -21,11 +21,11 @@ realtorsApp.controller('PropertyController', ['$scope',
 realtorsApp.config(function($routeProvider) {
     $routeProvider.when('/', {
         controller: 'PropertyController',
-        templateUrl: '/views/listPartial.html'
+        templateUrl: '/angular/views/listPartial.html'
     })
     .when('/property/:propertyId', {
         controller: 'PropertyShowController',
-        templateUrl: '/views/showPartial.html'
+        templateUrl: '/angular/views/showPartial.html'
     })
     .otherwise({redirectTo: '/'});
 });
