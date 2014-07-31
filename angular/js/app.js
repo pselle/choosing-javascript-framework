@@ -1,31 +1,36 @@
-var realtorsApp = angular.module('realtorsApp', ['ngRoute']);
+(function (angular) {
 
-var properties = [
-    { address: '123 Sunflower Lane', zip: 20001, listingPrice: 200000 },
-    { address: '983 Bluebell Lane', zip: 40503, listingPrice: 120000 },
-    { address: '60 Iris Lane', zip: 19106, listingPrice: 350000 }
-];
+    var realtorsApp = angular.module('realtorsApp', ['ngRoute']);
 
-realtorsApp.controller('PropertyShowController', ['$scope', '$routeParams',
-    function($scope, $routeParams) {
-        $scope.property = properties[$routeParams.propertyId];
-    }
-]);
+    var properties = [
+        { address: '123 Sunflower Lane', zip: 20001, listingPrice: 200000 },
+        { address: '983 Bluebell Lane', zip: 40503, listingPrice: 120000 },
+        { address: '60 Iris Lane', zip: 19106, listingPrice: 350000 }
+    ];
 
-realtorsApp.controller('PropertyController', ['$scope', 
-    function($scope) {
-        $scope.properties = properties;
-    }
-]);
+    realtorsApp.controller('PropertyShowController', ['$scope', '$routeParams',
+        function ($scope, $routeParams) {
+            $scope.property = properties[$routeParams.propertyId];
+        }
+    ]);
 
-realtorsApp.config(function($routeProvider) {
-    $routeProvider.when('/', {
-        controller: 'PropertyController',
-        templateUrl: '/angular/views/listPartial.html'
-    })
-    .when('/property/:propertyId', {
-        controller: 'PropertyShowController',
-        templateUrl: '/angular/views/showPartial.html'
-    })
-    .otherwise({redirectTo: '/'});
-});
+    realtorsApp.controller('PropertyController', ['$scope',
+        function ($scope) {
+            $scope.properties = properties;
+        }
+    ]);
+
+    realtorsApp.config(function ($routeProvider) {
+        $routeProvider.when('/', {
+            controller: 'PropertyController',
+            templateUrl: '/angular/views/listPartial.html'
+        })
+            .when('/property/:propertyId', {
+                controller: 'PropertyShowController',
+                templateUrl: '/angular/views/showPartial.html'
+            })
+            .otherwise({redirectTo: '/'});
+    });
+    
+})(window.angular);
+
