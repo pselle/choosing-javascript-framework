@@ -1,0 +1,25 @@
+{
+  "name": "choosing-javascript-framework",
+  "version": "0.0.0",
+  "description": "These are the (very, very) simple sample applications walked through in the (upcoming) Choosing a JavaScript Framework book, from Bleeding Edge Press.",
+  "main": "serve.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pselle/choosing-javascript-framework.git"
+  },
+  "author": "Pam Selle <pamela.selle@gmail.com>",
+  "contributors": [
+    "Christopher Hiller <chiller@badwing.com>",
+    "Tim Ruffles <timruffles@googlemail.com>",
+    "Jamie White <jamie@jgwhite.co.uk>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pselle/choosing-javascript-framework/issues"
+  },
+  "homepage": "https://github.com/pselle/choosing-javascript-framework",
+  "dependencies": {
+    "node-static": "^0.7.4"
+  }
+}
