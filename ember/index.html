@@ -4,7 +4,11 @@
     <title>Realtors &amp; Co.</title>
 </head>
 <body>
-    <h1>Realtor's Co Properties</h1>
+    <script type="text/x-handlebars" id="application">
+        <h1>Realtor's Co Properties</h1>
+        {{outlet}}
+    </script>
+
     <script type="text/x-handlebars" data-template-name="properties">
         <table>
         {{#each}}
