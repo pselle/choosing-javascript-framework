@@ -13,7 +13,7 @@
         <table>
         {{#each}}
             <tr>
-                <td>{{#link-to 'property' this }}{{address}}{{/link-to}}</td>
+                <td>{{link-to address "property" this}}</td>
                 <td>{{ zip }}</td>
                 <td>{{ price }}</td>
             </tr>
