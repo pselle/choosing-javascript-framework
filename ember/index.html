@@ -14,17 +14,16 @@
         {{#each}}
             <tr>
                 <td>{{link-to address "property" this}}</td>
-                <td>{{ zip }}</td>
-                <td>{{ price }}</td>
+                <td>{{zip}}</td>
+                <td>{{price}}</td>
             </tr>
         {{/each}}
         </table>
     </script>
 
     <script type="text/x-handlebars" id="property">
-        <h2>{{ address }}</h2>
-        <p>This great property in the {{ zip }} area is currently
-    listed at {{ price }}</p>
+        <h2>{{address}}</h2>
+        <p>This great property in the {{zip}} area is currently listed at {{price}}</p>
     </script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
