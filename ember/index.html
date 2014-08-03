@@ -11,13 +11,15 @@
 
     <script type="text/x-handlebars" id="properties">
         <table>
-        {{#each}}
-            <tr>
-                <td>{{link-to address "property" this}}</td>
-                <td>{{zip}}</td>
-                <td>{{price}}</td>
-            </tr>
-        {{/each}}
+            <tbody>
+            {{#each}}
+                <tr>
+                    <td>{{link-to address "property" this}}</td>
+                    <td>{{zip}}</td>
+                    <td>{{price}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
         </table>
     </script>
 
