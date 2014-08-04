@@ -1,4 +1,5 @@
 (function (angular) {
+    'use strict';
 
     var realtorsApp = angular.module('realtorsApp', ['ngRoute']);
 
@@ -31,6 +32,6 @@
             })
             .otherwise({redirectTo: '/'});
     });
-    
+
 })(window.angular);
 

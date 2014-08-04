@@ -19,7 +19,12 @@
     "url": "https://github.com/pselle/choosing-javascript-framework/issues"
   },
   "homepage": "https://github.com/pselle/choosing-javascript-framework",
-  "dependencies": {
+  "devDependencies": {
+    "jshint": "^2.5.2",
+    "jshint-stylish": "^0.4.0",
     "node-static": "^0.7.4"
+  },
+  "scripts": {
+    "test": "jshint --reporter=node_modules/jshint-stylish/stylish.js angular/ backbone/ ember/"
   }
 }

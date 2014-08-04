@@ -1,12 +1,13 @@
 #!/usr/bin/env node
+'use strict';
 
 /**
  * Simple static file server.
- * 
+ *
  * Usage:
- * 
+ *
  * ./serve.js
- * 
+ *
  */
 
 var Server = require('node-static').Server,
