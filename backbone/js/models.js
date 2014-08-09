@@ -1,10 +1,8 @@
-var App = App || {};
+var Property = Backbone.Model.extend();
 
-App.Property = Backbone.Model.extend({
-    defaults: {
-        streetAddress: '',
-        zipCode: 0,
-        currentAsk: 0,
-        imagePath: ''
+Property.Collection = Backbone.Collection.extend({
+    model: Property,
+    url: function() {
+      return "../api/properties.json";
     }
 });
