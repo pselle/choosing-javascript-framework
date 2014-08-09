@@ -1,40 +1,76 @@
-var App = App || {};
+var AppView = Backbone.View.extend({
+    initialize: function(opts) {
+        this.router = opts.router;
+        this.listenTo(this.router, "route:propertyShow", this.show, this);
+        this.listenTo(this.router, "route:fallback", this.home, this);
+    },
+    home: function() {
+        var home = new PropertyListView({
+            collection: this.collection
+        });
+        this.switchView(home);
+    },
+    show: function(id) {
 
-App.PropertyShowView = Backbone.View.extend({
+        if(this.collection.get(id)) {
+            show.call(this);
+        } else {
+            this.collection.once("sync", show, this);
+        }
+
+        function show() {
+            var home = new PropertyShowView({
+                model: this.collection.get(id)
+            });
+            this.switchView(home);
+        }
+    },
+    switchView: function(view) {
+        if(this.view) {
+            this.view.$el.fadeOut(150, function() {
+                this.view.$el.remove();
+                switchOver.call(this);
+            }.bind(this));
+        } else {
+            switchOver.call(this);
+        }
+
+        function switchOver() {
+            this.view = view;
+            this.view.render();
+            this.view.$el.hide().fadeIn(150);
+            this.$el.append(this.view.el);
+        }
+    }
+});
+
+var PropertyShowView = Backbone.View.extend({
     tagName: 'div',
     className: 'property',
-    template: _.template('<h1><%= streetAddress %></h1>'
-        + '<p>This lovely property lies in the <%= zipCode %> area,'
-        + ' with an asking price of <%= currentAsk %></p>'),
+    template: getTemplate("property-show"),
     render: function() {
         this.el.innerHTML = this.template(this.model.attributes);
         return this;
     }
 });
 
-App.PropertyListItem = Backbone.View.extend({
+var PropertyListItem = Backbone.View.extend({
     tagName: 'tr',
     className: 'property-item',
-    template: _.template('<td><a href="#property/<%= id %>"><%= streetAddress %></a></td>'
-        + '<td><%= zipCode %></td>'
-        + '<td><%= currentAsk %></td>'),
+    template: getTemplate("property-list-item"),
     render: function() {
         this.el.innerHTML = this.template(this.model.attributes);
         return this;
     }
 });
 
-App.PropertyListView = Backbone.View.extend({
+var PropertyListView = CollectionView.extend({
     className: 'property-list',
     tagName: 'table',
-    render: function() {
-        this.collection.each(function(item) {
-            this.renderProperty(item);
-        }, this);
-        return this;
-    },
-    renderProperty: function(item) {
-        var item = new App.PropertyListItem({ model: item });
-        this.el.appendChild(item.render().el);        
-    }
+    ItemView: PropertyListItem
 });
+
+
+function getTemplate(name) {
+    return _.template(document.getElementById(name).innerHTML);
+}

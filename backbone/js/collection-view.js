@@ -35,5 +35,5 @@ var CollectionView = Backbone.View.extend({
     },
     ItemView: function() {
         throw new Error("Missing ItemView subclass"); 
-    },
+    }
 });
