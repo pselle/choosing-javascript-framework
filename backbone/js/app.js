@@ -1,5 +1,3 @@
-boot(document.getElementById("content"));
-
 function boot(el) {
   var properties = new Property.Collection();
 
