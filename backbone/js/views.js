@@ -19,10 +19,24 @@ var PropertyShowView = Backbone.View.extend({
     tagName: 'div',
     className: 'property',
     template: getTemplate("property-show"),
+    initialize: function() {
+      this.listenTo(this.model, "change:starred", this.renderStarred, this);
+    },
+    events: {
+      "click .star": "starred"
+    },
     render: function() {
         this.el.innerHTML = this.template(this.model.attributes);
+        this.renderStarred();
         return this;
-    }
+    },
+    renderStarred: function() {
+       this.$(".star").toggleClass("active",
+         this.model.get("starred"));
+    },
+    starred: function(event) {
+       this.model.star();
+    },
 });
 
 var PropertyListItem = Backbone.View.extend({

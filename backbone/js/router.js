@@ -15,10 +15,17 @@ var Router = Backbone.Router.extend({
         this.stage.switchView(view);
     },
     propertyShow: function(id) {
-        var view = new PropertyShowView({
+        if(this.collection.get(id)) {
+            this._propertyShow(id);
+        } else {
+            this.collection.once("sync", this._propertyShow.bind(this, id));
+        }
+    },
+    _propertyShow: function(id) {
+        var home = new PropertyShowView({
             model: this.collection.get(id)
         });
-        this.stage.switchView(view);
-    },
+        this.stage.switchView(home);
+    }
 });
 

@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html>
 <head>
+    <meta charset="utf-8">
     <title>Realtors &amp; Co.</title>
+    <style>
+      .star.active {
+          color: yellow;
+      } 
+    </style>
 </head>
 <body>
     <h1>Realtor's &amp; Co Properties</h1>
@@ -10,6 +15,7 @@
     <script type="template" id="property-show">
         <h1><%= streetAddress %></h1>
         <p>This lovely property lies in the <%= zipCode %> area, with an asking price of <%= currentAsk %></p>
+        <button class="star <%= starred ? "active" : "" %>">Save</button>
     </script>
 
     <script type="template" id="property-list-item">
@@ -32,4 +38,3 @@
         boot(document.getElementById("content"));
     </script>
 </body>
-</html>
