@@ -86,12 +86,12 @@ var PropertyListView = CollectionView.extend({
 var StageView = Backbone.View.extend({
     switchView: function(view) {
         if(this.view) {
-            this.view.$el.fadeOut(150, this._doSwitch.bind(this, view));
+            this.view.$el.fadeOut(150, this._switchView.bind(this, view));
         } else {
-            this._doSwitch(view);
+            this._switchView(view);
         }
     },
-    _doSwitch: function(view) {
+    _switchView: function(view) {
         if(this.view) this.view.$el.remove();
         this.view = view;
         this.view.render();
