@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
 <head>
+    <meta charset="utf-8">
     <title>Realtors &amp; Co.</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <style>
+      .star.active {
+          color: yellow;
+      } 
+    </style>
 </head>
 <body>
     <div class="pure-skin-backbone">
@@ -14,6 +17,7 @@
     <script type="template" id="property-show">
         <h1><%= streetAddress %></h1>
         <p>This lovely property lies in the <%= zipCode %> area, with an asking price of <%= currentAsk %></p>
+        <button class="star <%= starred ? "active" : "" %>">Save</button>
     </script>
 
     <script type="template" id="property-list-item">
@@ -22,14 +26,16 @@
         <td><%= currentAsk %></td>
     </script>
 
+
     <script src="vendor/underscore-min.js"></script>
     <script src="vendor/jquery-1.11.0.min.js"></script>
     <script src="vendor/backbone.js"></script>
     
     <script src="js/router.js"></script>
     <script src="js/models.js"></script>
-    <script src="js/collection-view.js"></script>
     <script src="js/views.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        boot(document.getElementById("content"));
+    </script>
 </body>
-</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app=exercise>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test Suite</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="../vendor/mocha/mocha.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div id=mocha></div>
+
+        <script type="template" id="property-show">
+            <h1><%= streetAddress %></h1>
+            <p>This lovely property lies in the <%= zipCode %> area, with an asking price of <%= currentAsk %></p>
+        </script>
+
+        <script type="template" id="property-list-item">
+            <td><a href="#property/<%= id %>"><%= streetAddress %></a></td>
+            <td><%= zipCode %></td>
+            <td><%= currentAsk %></td>
+        </script>
+
+
+        <!-- TEST LIBRARIES -->
+        <script src="../vendor/mocha/mocha.js"></script>
+        <script>mocha.setup('bdd');</script>
+        <script src="../vendor/chai.js"></script>
+        <script>var assert = chai.assert;</script>
+        <script src="../vendor/sinon.js"></script>
+        <script>sinon.assert.expose(assert,{prefix: ""});</script>
+
+        <!-- YOUR CODE + DEPS -->
+        <script src="../vendor/underscore-min.js"></script>
+        <script src="../vendor/jquery-1.11.0.min.js"></script>
+        <script src="../vendor/backbone.js"></script>
+
+        <script src="../js/router.js"></script>
+        <script src="../js/models.js"></script>
+        <script src="../js/views.js"></script>
+        <script src="../js/app.js"></script>
+
+        <!-- YOUR TESTS -->
+        <script src="app_test.js"></script>
+
+        <!-- KICK OFF TESTS -->
+        <script src="run-tests.js"></script>
+    </body>
+</html>
