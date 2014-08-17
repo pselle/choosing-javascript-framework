@@ -5,11 +5,12 @@ function boot(el) {
 
   properties.fetch();
 
-  var appRouter = new Router();
-  var appView = new AppView({
-      router: appRouter,
-      collection: properties,
+  var appView = new StageView({
       el: el
+  });
+  var appRouter = new Router({
+      collection: properties,
+      stage: appView
   });
   Backbone.history.start();
 }

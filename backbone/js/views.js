@@ -1,41 +1,12 @@
-var AppView = Backbone.View.extend({
-    initialize: function(opts) {
-        this.router = opts.router;
-        this.listenTo(this.router, "route:propertyShow", this.show, this);
-        this.listenTo(this.router, "route:fallback", this.home, this);
-    },
-    home: function() {
-        var home = new PropertyListView({
-            collection: this.collection
-        });
-        this.switchView(home);
-    },
-    show: function(id) {
-
-        if(this.collection.get(id)) {
-            show.call(this);
-        } else {
-            this.collection.once("sync", show, this);
-        }
-
-        function show() {
-            var home = new PropertyShowView({
-                model: this.collection.get(id)
-            });
-            this.switchView(home);
-        }
-    },
+var StageView = Backbone.View.extend({
     switchView: function(view) {
         if(this.view) {
-            this.view.$el.fadeOut(150, function() {
-                this.view.$el.remove();
-                switchOver.call(this);
-            }.bind(this));
+            this.view.$el.fadeOut(150, switchOver.bind(this));
         } else {
             switchOver.call(this);
         }
-
         function switchOver() {
+            if(this.view) this.view.$el.remove();
             this.view = view;
             this.view.render();
             this.view.$el.hide().fadeIn(150);
