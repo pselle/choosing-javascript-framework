@@ -1,0 +1,17 @@
+{
+  "bitwise": true,
+  "curly": true,
+  "eqeqeq": true,
+  "forin": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "undef": true,
+  "strict": true,
+  "indent": 4,
+  "expr": true,
+  "newcap": false,
+  "browser": true,
+  "predef": ["angular", "module", "inject", "jasmine", "beforeEach", "before", "afterEach", "after",
+    "describe", "it", "expect", "spyOn"]
+}
