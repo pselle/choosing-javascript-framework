@@ -78,7 +78,7 @@ var CollectionView = Backbone.View.extend({
 
 
 var PropertyListView = CollectionView.extend({
-    className: 'property-list',
+    className: 'property-list pure-table',
     tagName: 'table',
     ItemView: PropertyListItem
 });

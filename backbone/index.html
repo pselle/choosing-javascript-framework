@@ -5,15 +5,17 @@
     <style>
       .star.active {
           color: yellow;
-      } 
+      }
     </style>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-    <div class="pure-skin-backbone">
-        <h1>Realtor's &amp; Co Properties</h1>
+    <div id="page-wrap" class="pure-skin-backbone">
+        <div id="header-wrap">
+            <h1 class="page-header">Realtor's &amp; Co Properties</h1>
+        </div>
         <div id="content"></div>
     </div>
 
@@ -33,7 +35,7 @@
     <script src="vendor/underscore-min.js"></script>
     <script src="vendor/jquery-1.11.0.min.js"></script>
     <script src="vendor/backbone.js"></script>
-    
+
     <script src="js/router.js"></script>
     <script src="js/models.js"></script>
     <script src="js/views.js"></script>
