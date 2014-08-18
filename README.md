@@ -31,3 +31,6 @@ House photos used with attribution via Creative Commons:
 - [https://www.flickr.com/photos/andrewmalone/5408809722]()
 - [https://www.flickr.com/photos/squirrelradio/5951605636]()
 
+House icon used via Noun Project, by Pavel Nikandrov
+http://thenounproject.com/term/house/17139/
+
