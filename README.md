@@ -34,3 +34,6 @@ House photos used with attribution via Creative Commons:
 House icon used via Noun Project, by Pavel Nikandrov
 http://thenounproject.com/term/house/17139/
 
+House icon used via Noun Project, by Pavel Nikandrov
+http://thenounproject.com/term/house/17139/
+
