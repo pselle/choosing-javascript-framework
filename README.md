@@ -5,21 +5,29 @@ in the (upcoming) Choosing a JavaScript Framework book, from [Bleeding Edge Pres
 
 ## Serve Files
 
-If you need a web server, install [NodeJS](http://nodejs.org), then execute:
+If you need a web server, execute:
 
 ```
-npm install
-./serve.js
+./serve
 ```
 
-The files in this application will then be accessible at [http://localhost:8080]() as long as the process is running;
+The files in this application will then be accessible at [http://localhost:8000]() as long as the process is running;
 `Ctrl-C` to kill the server.
+
+> [Python](http://python.org) is required to run the server.
+
+## Application Dependencies
+
+Each framework's dependencies were installed via Bower.  For your convenience, these dependencies are under version control.
+
+To modify the dependencies, you may wish to [install Bower](http://bower.io/#install-bower).
 
 ## Attribution
 
 House photos used with attribution via Creative Commons:
-https://www.flickr.com/photos/jwthompson2/139445633/in/photostream/
-https://www.flickr.com/photos/joesixpac/508449389
-https://www.flickr.com/photos/andrewmalone/5408809722
-https://www.flickr.com/photos/squirrelradio/5951605636
+
+- [https://www.flickr.com/photos/jwthompson2/139445633/in/photostream/]()
+- [https://www.flickr.com/photos/joesixpac/508449389]()
+- [https://www.flickr.com/photos/andrewmalone/5408809722]()
+- [https://www.flickr.com/photos/squirrelradio/5951605636]()
 
