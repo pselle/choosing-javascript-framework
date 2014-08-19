@@ -1,0 +1,16 @@
+{
+  "name": "jasmine-standalone",
+  "version": "2.0.0",
+  "authors": [
+    "59naga <i59naga@icloud.com>"
+  ],
+  "description": "unzipped jasmine-standalone-2.0.0.zip",
+  "main": "index.html",
+  "keywords": [
+    "bdd",
+    "test",
+    "html5"
+  ],
+  "license": "MIT",
+  "homepage": "http://jasmine.github.io/"
+}

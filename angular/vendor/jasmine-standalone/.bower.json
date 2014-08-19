@@ -1,0 +1,25 @@
+{
+  "name": "jasmine-standalone",
+  "version": "2.0.0",
+  "authors": [
+    "59naga <i59naga@icloud.com>"
+  ],
+  "description": "unzipped jasmine-standalone-2.0.0.zip",
+  "main": "index.html",
+  "keywords": [
+    "bdd",
+    "test",
+    "html5"
+  ],
+  "license": "MIT",
+  "homepage": "http://jasmine.github.io/",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.0",
+    "commit": "8eb199564a64c6859c9810514a22603356501045"
+  },
+  "_source": "git://github.com/59naga/jasmine-standalone.git",
+  "_target": "~2.0.0",
+  "_originalSource": "jasmine-standalone"
+}

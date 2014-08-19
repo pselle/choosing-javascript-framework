@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>how to bdd : http://jasmine.github.io/2.0/introduction.html</title>
+  <link href="jasmine.css" rel="stylesheet">
+  <script src="jasmine.js"></script>
+  <script src="jasmine-html.js"></script>
+  <script src="jasmine-boot.js"></script>
+  <script>
+    describe('Specs',function(){
+      describe('first',function(){
+        it('Begin bdd.',function(){
+          expect("hello world!").toMatch('hell');
+        });
+        it('End of bdd.',function(){
+          expect("world end!").not.toMatch('hell');
+        });
+      });
+    });
+  </script>
+</head>
+</html>
