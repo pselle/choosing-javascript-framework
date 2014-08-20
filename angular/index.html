@@ -3,14 +3,17 @@
 <head>
     <title>Realtors &amp; Co.</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" href="/shared/shared_style.css">
     <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-route.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </head>
 <body ng-app="realtorsApp">
-    <div class="pure-skin-angular">
-        <h1>Realtor's Co Properties</h1>
+    <div id="page-wrap" class="pure-skin-angular">
+        <div id="header-wrap">
+            <h1 class="page-header">Realtor's &amp; Co Properties</h1>
+        </div>
         <div ng-view></div>
     </div>
 </body>
