@@ -11,10 +11,8 @@ If you need a web server, execute:
 ./serve
 ```
 
-The files in this application will then be accessible at [http://localhost:8000]() as long as the process is running;
+The files in this application will then be accessible at [http://localhost:8000](http://localhost:8000) as long as the process is running;
 `Ctrl-C` to kill the server.
-
-> [Python](http://python.org) is required to run the server.
 
 ## Application Dependencies
 
@@ -33,7 +31,3 @@ House photos used with attribution via Creative Commons:
 
 House icon used via Noun Project, by Pavel Nikandrov
 http://thenounproject.com/term/house/17139/
-
-House icon used via Noun Project, by Pavel Nikandrov
-http://thenounproject.com/term/house/17139/
-
