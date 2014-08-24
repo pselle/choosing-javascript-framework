@@ -11,6 +11,6 @@ var Property = Backbone.Model.extend({
 Property.Collection = Backbone.Collection.extend({
     model: Property,
     url: function() {
-      return "/backbone/api/properties.json";
+      return "/shared/data.json";
     }
 });

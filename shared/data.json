@@ -1,36 +1,33 @@
-{
-    "properties": [
-    {
+[{
         "id": 1,
-        "address": "1123 Sunny Road",
-        "zip": 37890,
+        "streetAddress": "1123 Sunny Road",
+        "zipCode": 37890,
         "price": 230000,
         "short_desc": "This is a fantastic house!",
         "photo": "/shared/images/andrewmalone_house.jpg",
         "photo_attribution": "andrewmalone"
     }, {
         "id": 2,
-        "address": "409 Lavender Blvd",
-        "zip": 19106,
+        "streetAddress": "409 Lavender Blvd",
+        "zipCode": 19106,
         "price": 120000,
         "short_desc": "This is a fantastic house!",
         "photo": "/shared/images/joesixpac_house.jpg",
         "photo_attribution": "andrewmalone"
     }, {
         "id": 3,
-        "address": "347 Lotus Lane",
-        "zip": 10001,
+        "streetAddress": "347 Lotus Lane",
+        "zipCode": 10001,
         "price": 160000,
         "short_desc": "This is a fantastic house!",
         "photo": "/shared/images/jwthompson2_house.jpg",
         "photo_attribution": "andrewmalone"
     }, {
         "id": 4,
-        "address": "23 Daisy Parkway",
-        "zip": 40502,
+        "streetAddress": "23 Daisy Parkway",
+        "zipCode": 40502,
         "price": 1000000,
         "short_desc": "This is a fantastic house!",
         "photo": "/shared/images/squirrelradio_house.jpg",
         "photo_attribution": "andrewmalone"
     }]
-}

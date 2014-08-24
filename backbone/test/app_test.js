@@ -56,7 +56,7 @@ describe("property UI", function() {
     });
     
     var PROPERTY_JSON = [
-        { "id": 1, "streetAddress": "123 Drury Lane", "zipCode": 12345, "currentAsk": 230000, "imagePath": "" }, { "id": 2, "streetAddress": "983 Lilac Blvd", "zipCode": 20923, "currentAsk": 1000000, "imagePath": "" }, { "id": 3, "streetAddress": "342 Spruce St", "zipCode": 20923, "currentAsk": 1000000, "imagePath": ""}
+        { "id": 1, "streetAddress": "123 Drury Lane", "zipCode": 12345, "price": 230000, "imagePath": "" }, { "id": 2, "streetAddress": "983 Lilac Blvd", "zipCode": 20923, "price": 1000000, "imagePath": "" }, { "id": 3, "streetAddress": "342 Spruce St", "zipCode": 20923, "price": 1000000, "imagePath": ""}
     ];
   
 });
