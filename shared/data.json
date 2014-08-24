@@ -13,7 +13,7 @@
         "price": 120000,
         "short_desc": "This is a fantastic house!",
         "photoPath": "/shared/images/joesixpac_house.jpg",
-        "photo_attribution": "andrewmalone"
+        "photo_attribution": "joesixpac"
     }, {
         "id": 3,
         "streetAddress": "347 Lotus Lane",
@@ -21,7 +21,7 @@
         "price": 160000,
         "short_desc": "This is a fantastic house!",
         "photoPath": "/shared/images/jwthompson2_house.jpg",
-        "photo_attribution": "andrewmalone"
+        "photo_attribution": "jwthompson2"
     }, {
         "id": 4,
         "streetAddress": "23 Daisy Parkway",
@@ -29,5 +29,5 @@
         "price": 1000000,
         "short_desc": "This is a fantastic house!",
         "photoPath": "/shared/images/squirrelradio_house.jpg",
-        "photo_attribution": "andrewmalone"
+        "photo_attribution": "squirrelradio"
     }]
