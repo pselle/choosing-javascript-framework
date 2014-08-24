@@ -22,12 +22,15 @@
 
     <script type="template" id="property-show">
         <h1><%= streetAddress %></h1>
-        <p>This lovely property lies in the <%= zipCode %> area, with an asking price of <%= price %></p>
-        <button class="star <%= starred ? "active" : "" %>">Save</button>
+        <h2><%= zipCode %></h2> 
+        <img src="<%= photoPath %>" />
+        <p><%= short_desc %></p>
+        <p>Asking price: <%= price %></p>
+        <button class="pure-button star <%= starred ? "pure-button-active" : "" %>">Save as favorite</button>
     </script>
 
     <script type="template" id="property-list-item">
-        <td><img src="<%= photoPath %>"></td>
+        <td><img src="<%= photoPath %>" /></td>
         <td>
             <h1><a href="#property/<%= id %>"><%= streetAddress %></a></h1>
             <p>Asking Price: <%= price %></p>

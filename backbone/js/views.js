@@ -14,7 +14,7 @@ var PropertyShowView = Backbone.View.extend({
         return this;
     },
     renderStarred: function() {
-       this.$(".star").toggleClass("active",
+       this.$(".star").toggleClass("pure-button-active",
          this.model.get("starred"));
     },
     starred: function(event) {
@@ -78,7 +78,7 @@ var CollectionView = Backbone.View.extend({
 
 
 var PropertyListView = CollectionView.extend({
-    className: 'property-list pure-table',
+    className: 'property-list pure-table pure-table-horizontal',
     tagName: 'table',
     ItemView: PropertyListItem
 });
