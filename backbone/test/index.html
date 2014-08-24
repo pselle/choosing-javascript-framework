@@ -20,9 +20,12 @@
         </script>
 
         <script type="template" id="property-list-item">
-            <td><a href="#property/<%= id %>"><%= streetAddress %></a></td>
-            <td><%= zipCode %></td>
-            <td><%= price %></td>
+            <td><img src="<%= photoPath %>"></td>
+            <td>
+                <h1><a href="#property/<%= id %>"><%= streetAddress %></a></h1>
+                <p>Asking Price: <%= price %></p>
+                <p><%= zipCode %></p>
+            </td>
         </script>
 
 

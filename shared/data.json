@@ -4,7 +4,7 @@
         "zipCode": 37890,
         "price": 230000,
         "short_desc": "This is a fantastic house!",
-        "photo": "/shared/images/andrewmalone_house.jpg",
+        "photoPath": "/shared/images/andrewmalone_house.jpg",
         "photo_attribution": "andrewmalone"
     }, {
         "id": 2,
@@ -12,7 +12,7 @@
         "zipCode": 19106,
         "price": 120000,
         "short_desc": "This is a fantastic house!",
-        "photo": "/shared/images/joesixpac_house.jpg",
+        "photoPath": "/shared/images/joesixpac_house.jpg",
         "photo_attribution": "andrewmalone"
     }, {
         "id": 3,
@@ -20,7 +20,7 @@
         "zipCode": 10001,
         "price": 160000,
         "short_desc": "This is a fantastic house!",
-        "photo": "/shared/images/jwthompson2_house.jpg",
+        "photoPath": "/shared/images/jwthompson2_house.jpg",
         "photo_attribution": "andrewmalone"
     }, {
         "id": 4,
@@ -28,6 +28,6 @@
         "zipCode": 40502,
         "price": 1000000,
         "short_desc": "This is a fantastic house!",
-        "photo": "/shared/images/squirrelradio_house.jpg",
+        "photoPath": "/shared/images/squirrelradio_house.jpg",
         "photo_attribution": "andrewmalone"
     }]
