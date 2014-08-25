@@ -1,0 +1,23 @@
+/* "fade in" */
+.reveal-animation.ng-enter {
+  -moz-transition: 0.5s linear all;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+.reveal-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+/* "fade out" */
+.reveal-animation.ng-leave {
+  -moz-transition: 0.5s linear all;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  opacity: 1;
+}
+
+.reveal-animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}

@@ -2,10 +2,11 @@
   "name": "choosing-a-javascript-framework-angularjs-test",
   "version": "0.1.0",
   "dependencies": {
-    "angular": "~1.2.22",
-    "angular-mocks": "~1.2.22",
+    "angular": "~1.2.23",
+    "angular-mocks": "~1.2.23",
     "jasmine-standalone": "~2.0.0",
-    "angular-route": "~1.2.22"
+    "angular-route": "~1.2.23",
+    "angular-animate": "~1.2.23"
   },
   "devDependencies": {}
 }

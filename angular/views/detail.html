@@ -1,0 +1,14 @@
+<a href="#" class="pure-button"><i class="fa fa-arrow-circle-left"></i> Back to List</a>
+<div ng-show="property">
+  <h1>{{ property.streetAddress }}</h1>
+
+  <h2>{{ property.zipCode }}</h2>
+  <img ng-src="{{ property.photoPath }}" alt="Photo by {{ property.photo_attribution }}"
+       title="{{ property.streetAddress }}"/>
+
+  <p>{{ property.short_desc }}</p>
+
+  <p>Asking price: {{ property.price | currency }}</p>
+  <button class="pure-button star" ng-class="{'pure-button-active': property.$starred}">Save as favorite</button>
+</div>
+<div ng-hide="property">No property found!</div>

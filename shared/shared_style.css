@@ -1,20 +1,18 @@
 #page-wrap {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 #header-wrap {
-    width: 330px;
-    margin: 0 auto;
+  width: 330px;
+  margin: 0 auto;
 }
+
 .page-header {
-    font-family: Tahoma, Geneva, sans-serif;
-    /* text-align:center; */
-    background-image: url('/shared/images/icon_17139.png');
-    display: block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 230px;
-    padding-left: 100px;
-    /* margin: 0 auto; */
+  font-family: Tahoma, Geneva, sans-serif;
+  display: block;
+  background: url('/shared/images/icon_17139.png') no-repeat;
+  background-size: contain;
+  width: 230px;
+  padding-left: 100px;
 }

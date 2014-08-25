@@ -1,1 +1,10 @@
 .DS_Store
+node_modules
+angular.min.js.gzip
+shared/vendor/fontawesome/.npmignore
+shared/vendor/fontawesome/.gitignore
+shared/vendor/fontawesome/less
+shared/vendor/fontawesome/scss
+shared/vendor/pure/*.css
+!shared/vendor/pure/pure.css
+!shared/vendor/pure/pure-min.css
