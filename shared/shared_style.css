@@ -16,3 +16,14 @@
   width: 230px;
   padding-left: 100px;
 }
+
+/* Realtors & Co Styles */
+.property-item h1 a {
+    color: #4162a8;
+    text-decoration: none;
+}
+
+.property {
+    text-align: center;
+    padding-bottom: 5em;
+}
