@@ -1,0 +1,13 @@
+<table class="pure-table pure-table-striped">
+  <tbody>
+  <tr ng-repeat="property in properties">
+    <td style="text-align: center;"><img ng-src="{{ property.photoPath }}"
+                                         alt="Photo by {{ property.photo_attribution }}"
+                                         style="width: 40%; height: auto"
+                                         title="{{ property.streetAddress }}"/></td>
+    <td><a ng-href="#/detail/{{ property.id }}">{{ property.streetAddress }}</a></td>
+    <td>{{ property.zip }}</td>
+    <td>{{ property.price | currency }}</td>
+  </tr>
+  </tbody>
+</table>
