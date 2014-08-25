@@ -14,7 +14,23 @@
       <div id="header-wrap">
         <h1 class="page-header">Realtors &amp; Co Properties</h1>
       </div>
-      <div id="content"></div>
+      <div id="content">
+
+        <table class="property-list pure-table pure-table-horizontal">
+          <tbody>
+            {{#each}}
+              <tr class="property-item">
+                <td>
+                  <h1>{{streetAddress}}</h1>
+                  <p>Asking Price: {{price}}</p>
+                  <p>{{zipCode}}</p>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+
+      </div>
     </div>
   </script>
 
