@@ -21,6 +21,9 @@
             {{#each}}
               <tr class="property-item">
                 <td>
+                  <img {{bind-attr src=photoPath}}>
+                </td>
+                <td>
                   <h1>{{streetAddress}}</h1>
                   <p>Asking Price: {{price}}</p>
                   <p>{{zipCode}}</p>
