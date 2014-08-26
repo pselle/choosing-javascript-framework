@@ -9,6 +9,6 @@
   <p>{{ property.short_desc }}</p>
 
   <p>Asking price: {{ property.price | currency }}</p>
-  <button class="pure-button star" ng-class="{'pure-button-active': property.$starred}">Save as favorite</button>
+  <button class="pure-button star" ng-class="{'pure-button-active': property.favorite}">Toggle Favorite</button>
 </div>
 <div ng-hide="property">No property found!</div>

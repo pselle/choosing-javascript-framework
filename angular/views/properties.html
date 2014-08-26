@@ -6,7 +6,9 @@
                                          title="{{ property.streetAddress }}"/></td>
     <td>
       <h1><a ng-href="#/detail/{{ property.id }}">{{ property.streetAddress }}</a></h1>
+
       <p>Asking Price: {{ property.price | currency }}</p>
+
       <p>{{ property.zipCode }}</p>
     </td>
   </tr>
