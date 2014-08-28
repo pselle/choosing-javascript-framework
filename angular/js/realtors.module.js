@@ -1,7 +1,7 @@
 (function (angular) {
   'use strict';
 
-  angular.module('realtorsApp', ['ngRoute'])
+  angular.module('realtorsApp', ['ngRoute', 'ngAnimate'])
     .config(function ($routeProvider) {
       $routeProvider.when('/', {
         controller: 'PropertiesController',

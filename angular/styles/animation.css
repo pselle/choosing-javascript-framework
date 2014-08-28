@@ -1,8 +1,8 @@
 /* "fade in" */
 .reveal-animation.ng-enter {
-  -moz-transition: 0.5s linear all;
-  -webkit-transition: 0.5s linear all;
-  transition: 0.5s linear all;
+  -moz-transition: 1s linear all;
+  -webkit-transition: 1s linear all;
+  transition: 1s linear all;
   opacity: 0;
 }
 
