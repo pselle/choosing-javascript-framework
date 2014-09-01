@@ -47,6 +47,12 @@
     <img {{bind-attr src=photoPath}}>
     <p>{{short_desc}}</p>
     <p>Asking Price: {{format-number price "$0,0"}}</p>
+    <p>
+      {{#link-to "index" class="pure-button"}}
+        <i class="fa fa-arrow-circle-left"></i>
+        Back to List
+      {{/link-to}}
+    </p>
   </script>
 
   <script src="vendor/jquery/dist/jquery.js"></script>
