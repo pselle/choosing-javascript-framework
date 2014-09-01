@@ -37,6 +37,14 @@
     </div>
   </script>
 
+  <script type="text/x-handlebars" id="property">
+    <h1>{{streetAddress}}</h1>
+    <h2>{{zipCode}}</h2>
+    <img {{bind-attr src=photoPath}}>
+    <p>{{short_desc}}</p>
+    <p>Asking Price: {{format-number price "$0,0"}}</p>
+  </script>
+
   <script src="vendor/jquery/dist/jquery.js"></script>
   <script src="vendor/handlebars/handlebars.js"></script>
   <script src="vendor/ember/ember.js"></script>
