@@ -16,6 +16,8 @@
       </div>
       <div id="content">
 
+        {{outlet}}
+
         <table class="property-list pure-table pure-table-horizontal">
           <tbody>
             {{#each}}
@@ -24,7 +26,7 @@
                   <img {{bind-attr src=photoPath}}>
                 </td>
                 <td>
-                  <h1>{{streetAddress}}</h1>
+                  <h1>{{link-to streetAddress "property" this}}</h1>
                   <p>Asking Price: {{format-number price "$0,0"}}</p>
                   <p>{{zipCode}}</p>
                 </td>
