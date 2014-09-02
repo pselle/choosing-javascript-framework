@@ -20,6 +20,11 @@ App.PropertyRoute = Ember.Route.extend({
   }
 });
 
+App.IndexController = Ember.ArrayController.extend({
+  queryParams: ['sortAscending'],
+  sortProperties: ['price']
+});
+
 Ember.Handlebars.helper('format-number', function(number, format) {
   return numeral(number).format(format);
 });
