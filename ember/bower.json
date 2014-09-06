@@ -4,7 +4,8 @@
   "dependencies": {
     "numeral": "~1.5.0",
     "ember": "~1.7.0",
-    "pure": "~0.5.0"
+    "pure": "~0.5.0",
+    "leaflet": "~0.7.3"
   },
   "devDependencies": {}
 }
