@@ -54,53 +54,62 @@ App.LeafletMapComponent = Ember.Component.extend({
   locateAddress: function() {
     var address = this.get('address');
 
-    this.lookupLatLng(address).then(Ember.run.bind(this, function(latLng) {
-      this.get('marker').setLatLng(latLng);
-      this.set('latLng', latLng);
-    }));
-  }.on('didInsertElement').observes('address'),
+    if (address) {
+      lookupLatLng(address).then(function(latLng) {
+        this.set('latLng', latLng);
+      }.bind(this));
+    }
+  }.observes('address').on('didInsertElement'),
 
-  setView: function() {
-    this.get('map').setView(this.get('latLng'), this.get('zoom'));
-  }.observes('latLng', 'zoom'),
+  updateMapAndMarker: function() {
+    var latLng = this.get('latLng');
+    var zoom = this.get('zoom');
+
+    if (latLng && zoom) {
+      var map = this.get('map');
+      var marker = this.get('marker');
+
+      map.setView(latLng, zoom);
+      marker.setLatLng(latLng);
+    }
+  }.observes('latLng', 'zoom').on('didInsertElement'),
 
   map: function() {
-    if (!this._map) {
-      this._map = L.map(this.get('element'));
+    var element = this.get('element');
+    var map = L.map(element);
 
-      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(this._map);
-    }
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-    return this._map;
+    return map;
   }.property(),
 
   marker: function() {
-    if (!this._marker) {
-      this._marker = L.marker();
-      this._marker.addTo(this.get('map'));
-    }
+    var map = this.get('map');
+    var marker = L.marker([0, 0]);
 
-    return this._marker;
-  }.property(),
+    marker.addTo(map);
 
-  lookupLatLng: function(address) {
-    var url = 'https://maps.googleapis.com' +
-              '/maps/api/geocode/json?address=' + address;
-
-    return $.getJSON(url).then(function(response) {
-      var result = response.results[0];
-
-      if (result) {
-        var location = result.geometry.location;
-        var lat = location.lat;
-        var lng = location.lng;
-
-        return [lat, lng];
-      } else {
-        throw new Error('Could not locate address: ' + address);
-      }
-    });
-  }
+    return marker;
+  }.property()
 });
+
+function lookupLatLng(address) {
+  var url = 'https://maps.googleapis.com' +
+            '/maps/api/geocode/json?address=' + address;
+
+  return $.getJSON(url).then(function(response) {
+    var result = response.results[0];
+
+    if (result) {
+      var location = result.geometry.location;
+      var lat = location.lat;
+      var lng = location.lng;
+
+      return [lat, lng];
+    } else {
+      throw new Error('Could not locate address: ' + address);
+    }
+  });
+}

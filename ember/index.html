@@ -50,10 +50,7 @@
     <img {{bind-attr src=photoPath}}>
     <p>{{short_desc}}</p>
     <p>Asking Price: {{format-number price "$0,0"}}</p>
-    <p>{{leaflet-map address=fullAddress
-                     width="400"
-                     height="300"
-                     zoom=15}}</p>
+    <p>{{leaflet-map address=fullAddress width=400 height=300 zoom=15}}</p>
     <p>
       {{#link-to "index" class="pure-button"}}
         <i class="fa fa-arrow-circle-left"></i>
