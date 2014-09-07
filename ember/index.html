@@ -52,6 +52,13 @@
     <p>Asking Price: {{format-number price "$0,0"}}</p>
     <p>{{leaflet-map address=fullAddress width=400 height=300 zoom=15}}</p>
     <p>
+      <button {{bind-attr class=":pure-button isFavorite:pure-button-active"}}
+              {{action "toggleFavorite"}}>
+        <i {{bind-attr class=":fa :fa-star isFavorite:red"}}></i>
+        Toggle Favorite
+      </button>
+    </p>
+    <p>
       {{#link-to "index" class="pure-button"}}
         <i class="fa fa-arrow-circle-left"></i>
         Back to List
