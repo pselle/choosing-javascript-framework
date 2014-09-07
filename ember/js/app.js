@@ -32,7 +32,29 @@ App.PropertyController = Ember.ObjectController.extend({
       this.get('zipCode'),
       'USA'
     ].join(', ');
-  }.property('streetAddress', 'zipCode')
+  }.property('streetAddress', 'zipCode'),
+
+  isFavorite: function(name, value) {
+    var id = this.get('id');
+    var key = 'favorites.' + id;
+
+    // If 2 arguments are received then we’re setting this property.
+    if (arguments.length === 2) {
+      if (value) {
+        window.localStorage[key] = true;
+      } else {
+        delete window.localStorage[key];
+      }
+    }
+
+    return window.localStorage[key];
+  }.property('id'),
+
+  actions: {
+    toggleFavorite: function() {
+      this.toggleProperty('isFavorite');
+    }
+  }
 });
 
 Ember.Handlebars.helper('format-number', function(number, format) {
