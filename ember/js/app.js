@@ -7,6 +7,13 @@ App.Router.map(function() {
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
     return $.getJSON('/shared/data.json');
+  },
+
+  actions: {
+    hideProperty: function(property) {
+      this.modelFor('application').removeObject(property);
+      this.transitionTo('index');
+    }
   }
 });
 
