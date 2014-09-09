@@ -79,5 +79,15 @@
   <script src="vendor/leaflet/dist/leaflet.js"></script>
 
   <script src="js/app.js"></script>
+
+  <script>
+    if (location.search.indexOf('test') !== -1) {
+      document.write('<link rel="stylesheet" href="vendor/qunit/qunit/qunit.css">');
+      document.write('<script src="vendor/qunit/qunit/qunit.js"><' + '/script>');
+      document.write('<div id="qunit"></div>');
+      document.write('<div id="qunit-fixture"></div>');
+      document.write('<script src="js/tests.js"><' + '/script>');
+    }
+  </script>
 </body>
 </html>
