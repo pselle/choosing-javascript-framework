@@ -2,8 +2,11 @@
   "name": "choosing-a-javascript-framework-emberjs-test",
   "version": "0.1.0",
   "dependencies": {
+    "numeral": "~1.5.0",
     "ember": "~1.7.0",
-    "pure": "~0.5.0"
+    "pure": "~0.5.0",
+    "leaflet": "~0.7.3",
+    "qunit": "~1.15.0"
   },
   "devDependencies": {}
 }
