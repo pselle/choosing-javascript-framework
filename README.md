@@ -1,7 +1,6 @@
 # Sample apps from Choosing a JavaScript Framework
 
-These are the (very, very) simple sample applications walked through
-in Choosing a JavaScript Framework, from [Bleeding Edge Press](http://bleedingedgepress.com/our-books/choosing-javascript-framework/).
+These are the applications walked through in Choosing a JavaScript Framework, from [Bleeding Edge Press](http://bleedingedgepress.com/our-books/choosing-javascript-framework/).
 
 ## Serve Files
 
